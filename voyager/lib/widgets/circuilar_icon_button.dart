@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:voyager/theme/color_pallete.dart';
 
 class CircularIconButton extends StatelessWidget {
