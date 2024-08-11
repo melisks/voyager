@@ -18,7 +18,16 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           color: AppColor.ckgrey.withOpacity(0.5),
           borderRadius: BorderRadius.circular(50)),
       child: Row(
-        children: [],
+        children: [
+          Container(
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+              color: AppColor.ckwhite,
+              borderRadius: BorderRadius.circular(35),
+            ),
+          )
+        ],
       ),
     );
   }
