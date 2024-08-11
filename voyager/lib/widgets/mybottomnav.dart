@@ -16,12 +16,19 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
       height: 70,
       margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       decoration: BoxDecoration(
-          color: AppColor.ckgrey.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(35)),
+        color: AppColor.ckgrey.withOpacity(0.5),
+        borderRadius: BorderRadius.circular(35),
+        border: Border.all(
+          color: AppColor.ckwhite.withOpacity(0.6),
+          width: 0.1,
+        ),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          CircularIconButton(),
+          CircularIconButton(
+            isSelected: true,
+          ),
           CircularIconButton(),
           CircularIconButton(),
           CircularIconButton(),

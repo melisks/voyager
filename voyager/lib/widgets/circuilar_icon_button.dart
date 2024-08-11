@@ -19,6 +19,10 @@ class CircularIconButton extends StatelessWidget {
             ? AppColor.ckwhite
             : AppColor.ckdarkgrey.withOpacity(0.5),
         borderRadius: BorderRadius.circular(30),
+        border: Border.all(
+          color: AppColor.ckwhite.withOpacity(0.6),
+          width: 0.1,
+        ),
       ),
       child: Center(
         child: Icon(CupertinoIcons.home),
