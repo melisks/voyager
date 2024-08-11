@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
+              colors: <Color>[
                 AppColor.ck1,
                 AppColor.ck2,
                 AppColor.ck3,
