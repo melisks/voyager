@@ -12,13 +12,13 @@ class CircularIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 50,
+      width: 50,
       decoration: BoxDecoration(
         color: isSelected
             ? AppColor.ckwhite
             : AppColor.ckdarkgrey.withOpacity(0.5),
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(25),
         border: Border.all(
           color: AppColor.ckwhite.withOpacity(0.6),
           width: 0.1,
