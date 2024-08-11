@@ -29,7 +29,9 @@ class _HomeState extends State<Home> {
           ),
         ),
         child: Column(
-          children: [],
+          children: [
+            
+          ],
         ),
       ),
       bottomNavigationBar: MyBottomNavigationBar(),

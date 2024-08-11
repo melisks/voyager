@@ -2,12 +2,12 @@ flutter_native_splash:
   android: true
   ios: true
   web: false
-  color: "#FFFFFF"
-  image: assets/images/spotify.png
+  color: "#000000"
+  image: assets/images/voyager_icon.jpg
   color_dark: "#000000"
-  image_dark: assets/images/spotify.png
+  image_dark: assets/images/voyager_icon.jpg
   android_12:
-    image: assets/images/spotify.png
-    icon_background_color: "#FFFFFF"
-    image_dark: assets/images/spotify.png
+    image: assets/images/voyager_icon.jpg
+    icon_background_color: "#000000"
+    image_dark: assets/images/voyager_icon.jpg
     icon_background_color_dark: "#000000"

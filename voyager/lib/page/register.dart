@@ -87,7 +87,27 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 20,
                 ),
-                Text("Or continue with"),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 2,
+                        indent: 10,
+                        endIndent: 10,
+                        color: AppColor.ckwhite,
+                      ),
+                    ),
+                    Text("Or continue with"),
+                    Expanded(
+                      child: Divider(
+                        thickness: 2,
+                        indent: 10,
+                        endIndent: 10,
+                        color: AppColor.ckwhite,
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(
                   height: 20,
                 ),
@@ -129,8 +149,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             TextSpan(
                               text: "Login here",
                               recognizer: TapGestureRecognizer()
-                                ..onTap =
-                                    () => Navigator.of(context).pushNamed("/"),
+                                ..onTap = () => Navigator.of(context).pop("/"),
                               style: TextStyle(
                                 color: Colors.blue,
                               ),

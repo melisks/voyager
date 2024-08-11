@@ -83,7 +83,27 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 20,
               ),
-              Text("Or continue with"),
+              Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                      thickness: 2,
+                      indent: 10,
+                      endIndent: 10,
+                      color: AppColor.ckwhite,
+                    ),
+                  ),
+                  Text("Or continue with"),
+                  Expanded(
+                    child: Divider(
+                      thickness: 2,
+                      indent: 10,
+                      endIndent: 10,
+                      color: AppColor.ckwhite,
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: 20,
               ),
