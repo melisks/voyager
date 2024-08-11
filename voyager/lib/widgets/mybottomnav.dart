@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voyager/theme/color_pallete.dart';
+import 'package:voyager/widgets/circuilar_icon_button.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});
@@ -12,21 +13,18 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 70,
       margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       decoration: BoxDecoration(
           color: AppColor.ckgrey.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(50)),
+          borderRadius: BorderRadius.circular(35)),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Container(
-            height: 70,
-            width: 70,
-            decoration: BoxDecoration(
-              color: AppColor.ckwhite,
-              borderRadius: BorderRadius.circular(35),
-            ),
-          )
+          CircularIconButton(),
+          CircularIconButton(),
+          CircularIconButton(),
+          CircularIconButton(),
         ],
       ),
     );

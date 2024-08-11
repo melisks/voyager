@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColor {
   static Color ckbackground = Color(0xFF17181c);
-  static Color ckdarkgrey = Color(0xFF);
+  static Color ckdarkgrey = Color(0xFF444549);
   static Color ckgrey = Color(0xFF3a393d);
   static Color ckwhite = Color(0xFFffffff);
   static Color ckcontainer = Color(0xFF2a2a2e);
