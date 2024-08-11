@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:voyager/theme/color_pallete.dart';
 
@@ -31,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Spacer(),
               Text(
                 "Login here!",
                 style: TextStyle(
@@ -77,7 +79,64 @@ class _LoginPageState extends State<LoginPage> {
                   "Login",
                   style: TextStyle(color: AppColor.ckwhite),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text("Or continue with"),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: 50,
+                    width: 50,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    child: Image.asset(
+                      "assets/images/google_icon.png",
+                    ),
+                  ),
+                  Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: 50,
+                    width: 50,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    child: Image.asset(
+                      "assets/images/apple_icon.png",
+                    ),
+                  ),
+                ],
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        text: "Don't have an account? ",
+                        children: [
+                          TextSpan(
+                            text: "Register here",
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () =>
+                                  Navigator.of(context).pushNamed("/register"),
+                            style: TextStyle(
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           )),
         ),
