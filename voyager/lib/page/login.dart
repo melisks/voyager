@@ -14,7 +14,19 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[
+                AppColor.ck1,
+                AppColor.ck2,
+                AppColor.ck3,
+              ],
+            ),
+          ),
           child: Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -56,8 +68,11 @@ class _LoginPageState extends State<LoginPage> {
                 height: 10,
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: AppColor.ckgrey),
-                onPressed: () {},
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: AppColor.ckgrey),
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/home');
+                },
                 child: Text(
                   "Login",
                   style: TextStyle(color: AppColor.ckwhite),
