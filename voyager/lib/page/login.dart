@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:voyager/page/google_login.dart';
 import 'package:voyager/theme/color_pallete.dart';
 
 class LoginPage extends StatefulWidget {
@@ -46,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
@@ -57,6 +59,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: TextFormField(
+                  keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -110,14 +113,23 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    clipBehavior: Clip.antiAlias,
-                    height: 50,
-                    width: 50,
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                    child: Image.asset(
-                      "assets/images/google_icon.png",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => GoogleLogin(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      clipBehavior: Clip.antiAlias,
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Image.asset(
+                        "assets/images/google_icon.png",
+                      ),
                     ),
                   ),
                   Container(
