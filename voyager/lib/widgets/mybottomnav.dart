@@ -10,6 +10,7 @@ class MyBottomNavigationBar extends StatefulWidget {
 }
 
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+  int currentindex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,11 +28,33 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           CircularIconButton(
-            isSelected: true,
+            currentindex: currentindex,
+            index: 0,
+            onTap: (value) => setState(() {
+              currentindex = value;
+            }),
           ),
-          CircularIconButton(),
-          CircularIconButton(),
-          CircularIconButton(),
+          CircularIconButton(
+            currentindex: currentindex,
+            index: 1,
+            onTap: (value) => setState(() {
+              currentindex = value;
+            }),
+          ),
+          CircularIconButton(
+            currentindex: currentindex,
+            index: 2,
+            onTap: (value) => setState(() {
+              currentindex = value;
+            }),
+          ),
+          CircularIconButton(
+            currentindex: currentindex,
+            index: 3,
+            onTap: (value) => setState(() {
+              currentindex = value;
+            }),
+          ),
         ],
       ),
     );

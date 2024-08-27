@@ -2,14 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:voyager/theme/color_pallete.dart';
 
 class CircularIconButton extends StatelessWidget {
-  final bool isSelected;
+  final int currentindex;
+  final int index;
+  final ValueChanged<int> onTap;
   const CircularIconButton({
-    this.isSelected = false,
+    required this.currentindex,
+    required this.index,
+    required this.onTap,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected = currentindex == index;
     return Container(
       height: 50,
       width: 50,
